@@ -1,0 +1,58 @@
+.header {
+    background-color: #f8f9fa; /* Une couleur proche du blanc */
+    margin-bottom: 1rem;
+}
+
+.title {
+    color: #212529; /* Une couleur proche du noir pour le titre */
+    margin-bottom: 0.5rem;
+}
+
+.description {
+    color: #6c757d; /* Une couleur gris foncé pour la description */
+}
+
+.nav {
+    border-top: 1px solid #dee2e6; /* Ajoutez une bordure subtile au-dessus de la navigation */
+}
+
+/* Vous pouvez également ajouter des styles spécifiques pour navItem si nécessaire */
+.navItem a {
+    color: #495057; /* Couleur personnalisée pour les liens */
+}
+
+.navItem a:hover,
+.navItem a:focus {
+    color: #0056b3; /* Couleur lors du survol ou du focus */
+}
+
+.navLink {
+    position: relative; /* Position relative pour les pseudo-éléments */
+    display: inline-block; /* Affiche les liens en ligne */
+    padding: 10px 15px; /* Ajoute de l'espace autour du texte */
+    color: #6c757d; /* Une couleur sobre pour le texte */
+    text-decoration: none; /* Enlève le soulignement des liens */
+    transition: color 0.3s ease-in-out; /* Transition douce pour la couleur du texte */
+}
+
+.navLink::after { /* ce after est un pseudo-élément qui crée la barre sous le texte */
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px; /* Épaisseur de la barre */
+    background-color: #000000; /* Couleur de la barre */
+    transition: width 0.3s ease-in-out; /* Transition douce pour la largeur de la barre */
+}
+
+.navLink:hover::after,
+.navLink:focus::after {
+    width: 100%; /* La barre s'étend sur toute la largeur au survol ou au focus */
+    background-color: #000000; /* Changez la couleur de la barre au survol ou au focus si vous le souhaitez */
+}
+
+.navLink:hover,
+.navLink:focus {
+    color: #000000; /* Changez la couleur du texte au survol ou au focus si vous le souhaitez */
+}
